@@ -7,7 +7,8 @@
         "STARTED": [
           {
             "target": "RETRIEVING_PACKET_DATA",
-            "actions": []
+            "actions": [],
+            "meta": {}
           }
         ]
       }
@@ -15,19 +16,7 @@
     "RETRIEVING_PACKET_DATA": {
       "entry": [
         {
-          "type": "get_parameters (original_pkt)"
-        },
-        {
-          "type": "get_UDP_sport (original_pkt) (dport)"
-        },
-        {
-          "type": "get_UDP_dport (original_pkt) (sport)"
-        },
-        {
-          "type": "set_integer (53) (dns_dport)"
-        },
-        {
-          "type": "set_UDP_dport (original_pkt dns_dport) (pkt)"
+          "type": "get_parameters (pkt)"
         },
         {
           "type": "get_DNS_transaction_id (pkt) (txid)"
@@ -40,6 +29,12 @@
         },
         {
           "type": "get_IP_src (pkt) (cip)"
+        },
+        {
+          "type": "get_UDP_sport (pkt) (dport)"
+        },
+        {
+          "type": "get_UDP_dport (pkt) (sport)"
         },
         {
           "type": "done"
