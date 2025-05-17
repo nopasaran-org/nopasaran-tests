@@ -13,6 +13,7 @@ The test relies on a set of variables to configure the client-server communicati
   "server": "server",
   "controller_conf_filename": "controller_configuration.json",
   "ip": "TO_DO",
+  "destination_port": "TO_DO",
   "filter": "TO_DO",
   "qname": "TO_DO",
   "response_ip": "TO_DO"
@@ -30,6 +31,8 @@ The test relies on a set of variables to configure the client-server communicati
 - **controller_conf_filename**: The name of the configuration file (in JSON format) that contains additional settings or parameters required for the control channel synchronizing the workers. The default filename is `controller_configuration.json`.
 
 - **ip**: The IP address of the server. This should be configured to match the server's actual IP address in the test environment. Replace `TO_DO` with the actual IP address.
+
+- **destination_port**: The port on the destination server to which the DNS query is sent. This is typically `53`, but may be different for alternate protocols or testing conditions. Replace `TO_DO` with the actual port number used in the test.
 
 - **filter**: The filter expression used to capture and analyze network traffic. In this case, the filter is `TO_DO`, where `TO_DO` should match the BPF (Berkeley Packet Filter) expression that would be used to capture the relevant DNS packets.
 
