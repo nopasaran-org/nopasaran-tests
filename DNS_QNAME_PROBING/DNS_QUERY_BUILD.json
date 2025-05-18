@@ -24,6 +24,9 @@
           "type": "get_from_file (variables destination_port) (destination_port)"
         },
         {
+          "type": "get_from_file (variables qtype) (qtype)"
+        },
+        {
           "type": "set_random_int (1000 2000) (source_port)"
         },
         {
@@ -46,6 +49,9 @@
         },
         {
           "type": "set_query_name (query qname) (query)"
+        },
+        {
+          "type": "set_query_type (query qtype) (query)"
         },
         {
           "type": "add_DNS_query_to_DNS_packet (pkt query) (pkt)"
