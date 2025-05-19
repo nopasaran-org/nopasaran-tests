@@ -12,7 +12,7 @@ The test relies on a `variables.json` file to configure both the control channel
   "client": "client",
   "server": "server",
   "controller_conf_filename": "controller_configuration.json",
-  "port": "TO_DO",
+  "server_port": "TO_DO",
   "ip": "TO_DO",
   "qname": "TO_DO",
   "query_type": "TO_DO",
@@ -30,7 +30,7 @@ The test relies on a `variables.json` file to configure both the control channel
 
 - **controller_conf_filename**: Path to the controller configuration file (default: `"controller_configuration.json"`), which orchestrates coordination and shared state between client and server.
 
-- **port**: Port number used for the TCP DNS communication.
+- **server_port**: Server port number used for the TCP DNS communication.
 
 - **ip**: IP address of the DNS server to which the query is directed (used by the client).
 
