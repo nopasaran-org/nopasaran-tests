@@ -27,7 +27,7 @@
           "type": "get_from_file (variables server) (server)"
         },
         {
-          "type": "get_from_file (variables server_port) (server_port)"
+          "type": "get_from_file (variables destination_port) (destination_port)"
         },
         {
           "type": "call (CONTROL_CHANNEL_SET_UP role controller_conf_filename) (event ctrl)"
@@ -49,7 +49,7 @@
                 "type": "assign (client) (client)"
               },
               {
-                "type": "assign (server_port) (server_port)"
+                "type": "assign (destination_port) (destination_port)"
               },
               {
                 "type": "assign (ctrl) (ctrl)"
@@ -67,7 +67,7 @@
                 "type": "assign (client) (client)"
               },
               {
-                "type": "assign (server_port) (server_port)"
+                "type": "assign (destination_port) (destination_port)"
               },
               {
                 "type": "assign (ctrl) (ctrl)"
@@ -92,10 +92,10 @@
           "type": "get_from_file (variables qname) (qname)"
         },
         {
-          "type": "get_from_file (variables query_type) (query_type)"
+          "type": "get_from_file (variables qtype) (qtype)"
         },
         {
-          "type": "make_tcp_dns_query (qname query_type ip server_port) (received)"
+          "type": "make_tcp_dns_query (qname qtype ip destination_port) (received)"
         },
         {
           "type": "create_dict (dict)"
@@ -129,7 +129,7 @@
           "type": "create_tcp_dns_server (server)"
         },
         {
-          "type": "start_tcp_dns_server (server server_port)"
+          "type": "start_tcp_dns_server (server destination_port)"
         },
         {
           "type": "get_from_file (variables response_spec) (response_spec)"
@@ -138,7 +138,7 @@
           "type": "set (10) (timeout)"
         },
         {
-          "type": "wait_and_respond_tcp_dns_query (server server_port timeout response_spec) (received)"
+          "type": "wait_and_respond_tcp_dns_query (server destination_port timeout response_spec) (received)"
         },
         {
           "type": "create_dict (dict)"
