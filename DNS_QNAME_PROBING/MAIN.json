@@ -134,7 +134,7 @@
     "LISTENING": {
       "entry": [
         {
-          "type": "set (12) (timeout)"
+          "type": "set (20) (timeout)"
         },
         {
           "type": "wait_packet_signal (queue timeout)"
@@ -237,6 +237,12 @@
         },
         {
           "type": "add_element_to_dict (dict received) (dict)"
+        },
+        {
+          "type": "set (0.2) (waiting_time)"
+        },
+        {
+          "type": "wait (waiting_time)"
         },
         {
           "type": "send (rpacket)"
