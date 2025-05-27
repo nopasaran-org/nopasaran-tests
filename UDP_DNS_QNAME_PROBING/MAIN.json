@@ -89,13 +89,13 @@
           "type": "get_from_file (variables qtype) (qtype)"
         },
         {
-          "type": "make_udp_dns_query (qname qtype ip destination_port) (received)"
+          "type": "make_udp_dns_query (qname qtype ip destination_port) (response)"
         },
         {
           "type": "create_dict (dict)"
         },
         {
-          "type": "add_element_to_dict (dict received) (dict)"
+          "type": "add_element_to_dict (dict response) (dict)"
         },
         {
           "type": "done"
@@ -132,13 +132,13 @@
           "type": "set (10) (timeout)"
         },
         {
-          "type": "wait_and_respond_udp_dns_query (server destination_port timeout response_spec) (received)"
+          "type": "wait_and_respond_udp_dns_query (server destination_port timeout response_spec) (query)"
         },
         {
           "type": "create_dict (dict)"
         },
         {
-          "type": "add_element_to_dict (dict received) (dict)"
+          "type": "add_element_to_dict (dict query) (dict)"
         },
         {
           "type": "done"
