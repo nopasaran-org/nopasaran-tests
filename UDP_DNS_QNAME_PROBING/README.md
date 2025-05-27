@@ -1,6 +1,6 @@
 ## Overview
 
-This state machine governs a test that establishes a control channel between a client and a server, then either sends a TCP-based DNS query from the client or processes it on the server.
+This state machine governs a test that establishes a control channel between a client and a server, then either sends a UDP-based DNS query from the client or processes it on the server.
 
 ## Test Variables Structure
 
@@ -24,13 +24,13 @@ The test relies on a `variables.json` file to configure both the control channel
 
 - **role**: Specifies the role of the current instance, either `"client"` or `"server"`. Determines whether the system will send a DNS query or host a DNS server to respond.
 
-- **client**: Identifier for the client that will send a TCP DNS query.
+- **client**: Identifier for the client that will send a UDP DNS query.
 
 - **server**: Identifier for the DNS server that will listen for and respond to queries.
 
 - **controller_conf_filename**: Path to the controller configuration file (default: `"controller_configuration.json"`), which orchestrates coordination and shared state between client and server.
 
-- **destination_port**: Server port number used for the TCP DNS communication.
+- **destination_port**: Server port number used for the UDP DNS communication.
 
 - **ip**: IP address of the DNS server to which the query is directed (used by the client).
 
