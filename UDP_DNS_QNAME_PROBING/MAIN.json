@@ -27,6 +27,9 @@
           "type": "get_from_file (variables server) (server)"
         },
         {
+          "type": "get_from_file (variables ip) (ip)"
+        },
+        {
           "type": "get_from_file (variables destination_port) (destination_port)"
         },
         {
@@ -43,10 +46,7 @@
             "cond": "equal (role client)",
             "actions": [
               {
-                "type": "assign (role) (role)"
-              },
-              {
-                "type": "assign (client) (client)"
+                "type": "assign (ip) (ip)"
               },
               {
                 "type": "assign (destination_port) (destination_port)"
@@ -61,10 +61,7 @@
             "cond": "equal (role server)",
             "actions": [
               {
-                "type": "assign (role) (role)"
-              },
-              {
-                "type": "assign (client) (client)"
+                "type": "assign (ip) (ip)"
               },
               {
                 "type": "assign (destination_port) (destination_port)"
@@ -79,9 +76,6 @@
     },
     "SENDING_QUERY": {
       "entry": [
-        {
-          "type": "get_from_file (variables ip) (ip)"
-        },
         {
           "type": "set (0.2) (time)"
         },
@@ -129,7 +123,7 @@
           "type": "create_udp_dns_server (server)"
         },
         {
-          "type": "start_udp_dns_server (server destination_port)"
+          "type": "start_udp_dns_server (server ip destination_port)"
         },
         {
           "type": "get_from_file (variables response_spec) (response_spec)"
