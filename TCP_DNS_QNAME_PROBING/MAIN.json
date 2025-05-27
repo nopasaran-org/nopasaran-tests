@@ -37,7 +37,7 @@
         }
       ],
       "on": {
-        "DONE": [
+        "CONTROL_CHANNEL_READY": [
           {
             "target": "SENDING_QUERY",
             "cond": "equal (role client)",
