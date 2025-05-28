@@ -77,7 +77,7 @@
     "SENDING_QUERY": {
       "entry": [
         {
-          "type": "set (0.1) (time)"
+          "type": "set (1) (time)"
         },
         {
           "type": "wait (time)"
