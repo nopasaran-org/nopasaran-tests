@@ -27,7 +27,7 @@
           "type": "get_from_file (variables id) (id)"
         },
         {
-          "type": "set (4) (timeout)"
+          "type": "set (8) (timeout)"
         },
         {
           "type": "set (ready_connection) (ready_connection)"
