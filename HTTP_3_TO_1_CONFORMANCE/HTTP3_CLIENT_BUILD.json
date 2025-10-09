@@ -1,0 +1,78 @@
+{
+  "id": "HTTP3_CLIENT_BUILD",
+  "initial": "INIT",
+  "states": {
+    "INIT": {
+      "on": {
+        "STARTED": [
+          {
+            "target": "CREATE_CLIENT",
+            "actions": [],
+            "meta": {}
+          }
+        ]
+      }
+    },
+    "CREATE_CLIENT": {
+      "entry": [
+        {
+          "type": "get_from_file (variables host) (host)"
+        },
+        {
+          "type": "get_from_file (variables port) (port)"
+        },
+        {
+          "type": "create_http_3_client (host port) (client)"
+        },
+        {
+          "type": "done"
+        }
+      ],
+      "on": {
+        "DONE": [
+          {
+            "target": "START_CLIENT",
+            "actions": [
+              {
+                "type": "assign (client) (client)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "START_CLIENT": {
+      "entry": [
+        {
+          "type": "start_http_3_client (client) (event msg)"
+        },
+        {
+          "type": "done"
+        }
+      ],
+      "on": {
+        "DONE": [
+          {
+            "target": "BUILDING_DONE",
+            "actions": [
+              {
+                "type": "assign (client) (client)"
+              },
+              {
+                "type": "assign (event) (event)"
+              },
+              {
+                "type": "assign (msg) (msg)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "BUILDING_DONE": {
+      "entry": {
+        "type": "return_values (event client msg)"
+      }
+    }
+  }
+}
